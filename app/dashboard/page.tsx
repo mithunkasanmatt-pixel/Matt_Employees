@@ -106,7 +106,7 @@ export default async function DashboardPage() {
               </div>
             ) : (
               <div className="divide-y divide-slate-100">
-                {recentlyAdded.map((employee) => (
+                {recentlyAdded.map((employee: any) => (
                   <div
                     key={employee.id}
                     className="flex items-center justify-between py-4 first:pt-0 last:pb-0"
@@ -117,7 +117,7 @@ export default async function DashboardPage() {
                         <AvatarFallback className="bg-slate-100 font-semibold text-slate-600 text-xs">
                           {employee.name
                             .split(' ')
-                            .map((n) => n[0])
+                            .map((n: string) => n[0])
                             .join('')
                             .toUpperCase()
                             .slice(0, 2)}

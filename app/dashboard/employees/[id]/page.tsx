@@ -58,7 +58,7 @@ export default async function EmployeeDetailPage({ params }: EmployeeDetailPageP
                 <AvatarFallback className="bg-slate-100 font-bold text-slate-600 text-2xl">
                   {employee.name
                     .split(' ')
-                    .map((n) => n[0])
+                    .map((n: string) => n[0])
                     .join('')
                     .toUpperCase()
                     .slice(0, 2)}
