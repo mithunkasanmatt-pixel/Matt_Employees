@@ -1,0 +1,154 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-plus-jakarta);
+  --font-mono: var(--font-jetbrains-mono);
+  --font-heading: var(--font-plus-jakarta);
+  --color-brand-gold: #c9a26b;
+  --color-brand-brown: #682404;
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+}
+
+:root {
+  --background: #faf8f5;
+  --foreground: #2c1c14;
+  --card: #ffffff;
+  --card-foreground: #2c1c14;
+  --popover: #ffffff;
+  --popover-foreground: #2c1c14;
+  --primary: #682404;
+  --primary-foreground: #ffffff;
+  --secondary: #f5ece3;
+  --secondary-foreground: #682404;
+  --muted: #f5ece3;
+  --muted-foreground: #8c7365;
+  --accent: #c9a26b;
+  --accent-foreground: #ffffff;
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: #ebdcd0;
+  --input: #ebdcd0;
+  --ring: #c9a26b;
+  --chart-1: #682404;
+  --chart-2: #c9a26b;
+  --chart-3: #8c7365;
+  --chart-4: #ebdcd0;
+  --chart-5: #f5ece3;
+  --radius: 0.75rem;
+  --sidebar: #682404;
+  --sidebar-foreground: #f5ece3;
+  --sidebar-primary: #c9a26b;
+  --sidebar-primary-foreground: #140804;
+  --sidebar-accent: #521c03;
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: #7d320b;
+  --sidebar-ring: #c9a26b;
+}
+
+.dark {
+  --background: #140804;
+  --foreground: #f5ece3;
+  --card: #1f0f09;
+  --card-foreground: #f5ece3;
+  --popover: #1f0f09;
+  --popover-foreground: #f5ece3;
+  --primary: #c9a26b;
+  --primary-foreground: #140804;
+  --secondary: #35160b;
+  --secondary-foreground: #f5ece3;
+  --muted: #35160b;
+  --muted-foreground: #c2a798;
+  --accent: #682404;
+  --accent-foreground: #ffffff;
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: #3d2319;
+  --input: #3d2319;
+  --ring: #c9a26b;
+  --chart-1: #c9a26b;
+  --chart-2: #682404;
+  --chart-3: #c2a798;
+  --chart-4: #3d2319;
+  --chart-5: #35160b;
+  --sidebar: #100603;
+  --sidebar-foreground: #f5ece3;
+  --sidebar-primary: #c9a26b;
+  --sidebar-primary-foreground: #100603;
+  --sidebar-accent: #1f0f09;
+  --sidebar-accent-foreground: #f5ece3;
+  --sidebar-border: #23120c;
+  --sidebar-ring: #c9a26b;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  html {
+    @apply font-sans;
+  }
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.dark .glass {
+  background: rgba(24, 24, 27, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(39, 39, 42, 0.5);
+}
+
+.glow-primary {
+  box-shadow: 0 0 15px -3px rgba(201, 162, 107, 0.15);
+}
+
+.glow-primary-strong {
+  box-shadow: 0 0 25px -5px rgba(201, 162, 107, 0.35);
+}
